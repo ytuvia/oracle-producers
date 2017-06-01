@@ -1,6 +1,9 @@
-public class config {
+public class Config {
   file: string;
   constructor(file: string){
-    return file;
+    
+    return this.file;
   };
 }
+
+export var config = new Config();
