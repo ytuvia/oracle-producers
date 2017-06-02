@@ -5,19 +5,21 @@
   "main": "lib/index",
   "types": "lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./app/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^7.0.22",
+    "@types/node": "^7.0.23",
+    "@types/winston": "^2.3.2",
     "nodemon": "^1.11.0",
     "ts-node": "^3.0.4",
     "typescript": "^2.3.3"
   },
-  "scripts": {
-    "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./app/index.ts"
+  "dependencies": {
+    "twitter": "^1.7.0",
+    "winston": "^2.3.1"
   }
 }

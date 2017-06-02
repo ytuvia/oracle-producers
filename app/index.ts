@@ -1,5 +1,5 @@
-import { config } from './config'
+import config = require('./configurator')
 
-console.log(config());
-
-
+config.json.then((cnf:any)=>{
+	console.log(cnf);
+});
